@@ -3,6 +3,10 @@
 \textup{A 2 by 2 matrix }A \textup{'s entries can be rotated by L matrices and R matrices.}\\
 \textup{If }f \textup{ is a function that rotates entries of matrix }A,\\
 f(A) = LA \textup{ or }f(A) = AR\\
+\textup{given that }A=\begin{bmatrix}
+a & b  \\
+c & d
+\end{bmatrix}.\\
 \\
 \textup{Entry Single-Rotation Matrix (ESRM):}\\
 L_S=\frac{1}{ad-bc}\begin{bmatrix}
@@ -13,6 +17,11 @@ R_S=\frac{1}{ad-bc}\begin{bmatrix}
 d(b-c) & ad-b^2 \\
 ad-c^2 & a(c-b)
 \end{bmatrix}\\
+\textup{Resultant: }f(A)=L_SA=AR_S=\begin{bmatrix}
+c & a \\
+d & b
+\end{bmatrix}\\
+\\
 \textup{Entry Double-Rotation Matrix (EDRM):}\\
 L_D=\frac{1}{ad-bc}\begin{bmatrix}
 d^2-c^2 & ac-bd \\
@@ -22,6 +31,11 @@ R_D=\frac{1}{ad-bc}\begin{bmatrix}
 d^2-b^2 & cd-ab \\
 ab-cd & a^2-c^2
 \end{bmatrix}\\
+\textup{Resultant: }f(A)=L_DA=AR_D=\begin{bmatrix}
+d & c \\
+b & a
+\end{bmatrix}\\
+\\
 \textup{Entry Reverse-Rotation Matrix (ERRM):}\\
 L_R=\frac{1}{ad-bc}\begin{bmatrix}
 d(c-b) & ad-b^2 \\
@@ -31,8 +45,12 @@ R_R=\frac{1}{ad-bc}\begin{bmatrix}
 b(d-a) & d^2-bc \\
 a^2-bc & c(a-d)
 \end{bmatrix}\\
+\textup{Resultant: }f(A)=L_RA=AR_R=\begin{bmatrix}
+b & d \\
+a & c
+\end{bmatrix}\\
 \\
 \textup{Determinants}\\\begin{matrix}
 \det(L_S)=-1 & \det(L_D)=1 & \det(L_R)=-1 \\
 \det(R_S)=-1 & \det(R_D)=1 & \det(R_R)=-1
-\end{matrix}
+\end{matrix}\\
